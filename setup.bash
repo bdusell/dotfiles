@@ -1,5 +1,5 @@
 has_command() {
-  which "$1" 2&>1 /dev/null
+  which "$1" 2>&1 > /dev/null
 }
 
 require_command() {
