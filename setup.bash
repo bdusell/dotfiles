@@ -12,8 +12,7 @@ require_command() {
 
 download() {
   local url=$1
-  local output=$2
-  curl -L "$url" > "$output"
+  curl -L "$url"
 }
 
 require_command 'git' &&
