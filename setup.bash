@@ -19,6 +19,7 @@ require_command 'git' &&
 require_command 'curl' &&
 require_command 'vim' &&
 download https://github.com/bdusell/dotfiles/raw/master/.bashrc >> ~/.bashrc &&
+git config alias.hist 'log --all --tags --decorate --graph' &&
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim &&
 download https://github.com/bdusell/dotfiles/raw/master/.vimrc > ~/.vimrc &&
-vim +PluginInstall +qall
+vim +PluginInstall +qall - <<<''
